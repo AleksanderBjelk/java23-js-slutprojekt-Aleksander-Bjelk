@@ -8,6 +8,9 @@
         <script src="main.js" type="module"></script>
         <link rel="shortcut icon" href="#" />
         <title>Document</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+            </style>
     </head>
     <body>
         <header class="header">
@@ -15,22 +18,33 @@
             <h3 class="headertext">The Aleksander Movie Database</h3>
         </header>
         <nav>
+            <div class="navbar">
+                <a href="index.html" title="Startsida">Top 10 rated and trending</a>
+            </div>
             <form class="searchForm">
-                <input id="searchField" type="text" placeholder="Search for a movie, actor or anything movie related!">
+                <input
+                    id="searchField"
+                    type="text"
+                    placeholder="Search for a movie, actor or anything movie related!"
+                />
             </form>
         </nav>
         <main>
-        
-            <ul class="top-rated-list">
-                <li>Loading...</li> 
-            </ul>
-            <ul class="top-trending-list">
-                <li>Loading...</li> 
-            </ul>
-
+            <div class="movieLists">
+                <p>Top 10 rated movies on AMDB:</p>
+                <div class="top-rated-list">
+                    <ul>
+                        <li>Loading...</li>
+                    </ul>
+                </div>
+                <p>Top 10 trending movies on AMDB:</p>
+                <div class="top-trending-list">
+                    <ul>
+                        <li>Loading...</li>
+                    </ul>
+                </div>
+            </div>
         </main>
-        <footer>
-
-        </footer>
+        <footer></footer>
     </body>
 </html>

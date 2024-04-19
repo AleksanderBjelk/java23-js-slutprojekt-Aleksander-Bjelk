@@ -36,7 +36,9 @@
 body {
     background-color: rgb(8, 92, 156);
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .searchForm {
@@ -46,10 +48,11 @@ body {
 }
 
 #searchField {
-    width: 80%;
+    width: 90%;
     height: 40px;
     border-radius: 20px;
 }
+
 
 .center {
     text-align: center;
@@ -62,34 +65,111 @@ body {
     border-radius: 20px;
 }
 
-.top-rated-list {
-    position: relative; 
-    width: 35%; 
+.top-rated-list li{
+    position: relative;
     margin: auto; 
     padding: 5px;
     background-color:  rgb(8, 92, 156);
     border-radius: 20px;
     list-style: decimal;
+    display: inline-block;
 }
-.top-trending-list {
+.top-trending-list li{
     position: relative; 
-    width: 35%; 
     margin: auto; 
     padding: 5px;
     background-color:  rgb(8, 92, 156);
     border-radius: 20px;
     list-style: decimal;
+    display: inline-block;
 }
 
-main {
-    margin-top: 40px;
+.top-rated-list {
     background:rgb(0, 69, 125);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: auto;
+    white-space: nowrap;
+}
+.top-trending-list {
+    background:rgb(0, 69, 125);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+
+
+.movieLists {
+    margin-top: 40px;
+    margin-bottom: 40px;
     color: white;
     font-size: 20px;
     margin-left: 29px;
     margin-right: 29px;
-    display: flex;
-    justify-content: center;
-    min-height: 500px;
-    border-radius: 20px
+    border-radius: 20px;
+   
+}
+
+.navbar{
+    background-color: black;
+    padding: 15px;
+    width: 100%;
+    margin: auto;
+    text-align:center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    color: white;
+    font-size: 25px;
+    font-family: ;
+}
+
+a:link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+aside a:link {
+   color:rgb(0, 0, 0);
+   text-decoration: none;
+}
+
+aside a:visited {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+aside a:hover {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgb(8, 92, 156); 
+    transform: scale(110%); 
+    transition: 0.5s;
+    text-decoration: none;
+    padding: 7px;
+}
+    
+a:active {
+    box-shadow: 3px 3px 3px rgb(8, 92, 156);
+    text-decoration: none;
+}
+
+a:focus {
+    background: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+
 }

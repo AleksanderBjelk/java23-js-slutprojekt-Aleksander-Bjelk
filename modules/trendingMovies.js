@@ -8,17 +8,15 @@ export function getTopTrending(){
     };
     
     return fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
-        .then((response) => response.json())
-        .then((response) => {
-            console.log(response);
-            return response.results;
-        })
+      .then((response) => response.json())
+        .then((response) => 
+        console.log(response))
         .catch((err) => console.error(err));
 }
 
 
 export function renderTopTrending(movies, topTrendingList) {
-    topTrendingList.innerHTML = "Top 10 trending movies on AMDB:"; 
+    topTrendingList.innerHTML = ""; 
 
     movies.slice(0, 10).forEach((movie) => {
         const listItem = document.createElement("li");
@@ -26,3 +24,6 @@ export function renderTopTrending(movies, topTrendingList) {
         topTrendingList.appendChild(listItem);
     });
 }
+
+//Link to API
+//https://developer.themoviedb.org/reference/trending-movies

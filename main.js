@@ -1,19 +1,20 @@
-import { getData } from "./modules/searchData.js";
-import { getTopRated, renderTopRated } from "./modules/getTopRatedMovies.js";
-import { getTopTrending, renderTopTrending } from "./modules/trendingMovies.js";
+import { getSearchedMovie } from "./modules/userSearchMovie.js";
+import { getTopRated } from "./modules/getTopRatedMovies.js";
+import { getTopTrending } from "./modules/trendingMovies.js";
+
+const form = document.querySelector(".searchForm");
+const search = document.querySelector("input");
 
 
-const topRatedList = document.querySelector(".top-rated-list");
-const topTrendingList = document.querySelector(".top-trending-list");
+getTopRated().then((movies) => {
+    renderTopRated(movies, topRatedList);
+});
 
+getTopTrending().then((movies) => {
+    renderTopTrending(movies, topTrendingList);
+});
 
-
-window.onload = function () {
-    getTopRated().then((movies) => {
-        renderTopRated(movies, topRatedList);
-    });
-
-    getTopTrending().then((movies) => {
-        renderTopTrending(movies, topTrendingList);
-    });
-};
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    getSearchedMovie(search.value);
+});
