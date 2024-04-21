@@ -39,6 +39,7 @@ body {
     font-family: "Jersey 25", sans-serif;
     font-weight: 400;
     font-style: normal;
+    
 }
 
 .searchForm {
@@ -65,35 +66,9 @@ body {
     border-radius: 20px;
 }
 
-.top-rated-list li{
-    position: relative;
-    margin: auto; 
-    padding: 5px;
-    background-color:  rgb(8, 92, 156);
-    border-radius: 20px;
-    list-style: decimal;
-    display: inline-block;
-}
-.top-trending-list li{
-    position: relative; 
-    margin: auto; 
-    padding: 5px;
-    background-color:  rgb(8, 92, 156);
-    border-radius: 20px;
-    list-style: decimal;
-    display: inline-block;
-}
 
-.top-rated-list {
-    background:rgb(0, 69, 125);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 20px;
-    overflow: auto;
-    white-space: nowrap;
-}
-.top-trending-list {
+.top-trending-list, .top-rated-list {
+    display: flex;
     background:rgb(0, 69, 125);
     margin-top: 20px;
     margin-bottom: 20px;
@@ -113,12 +88,14 @@ body {
     margin-left: 29px;
     margin-right: 29px;
     border-radius: 20px;
+  
    
 }
 
 .navbar{
     background-color: black;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 100%;
     margin: auto;
     text-align:center;
@@ -127,8 +104,9 @@ body {
     margin-top: 10px;
     color: white;
     font-size: 25px;
-    font-family: ;
+    
 }
+
 
 a:link{
     color: #ffffff;
@@ -173,3 +151,15 @@ a:visited {
     text-decoration: none;
 
 }
+
+.card-title {
+    display: flex;
+    font-size: 14px; 
+    margin-bottom: 5px; 
+}
+
+
+.movieCardDiv{
+    margin: 10px;
+}
+

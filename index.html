@@ -7,10 +7,13 @@
         <link rel="stylesheet" href="css/style.css" />
         <script src="main.js" type="module"></script>
         <link rel="shortcut icon" href="#" />
-        <title>Document</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
-            </style>
+        <title>AMDB</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <header class="header">
@@ -19,30 +22,24 @@
         </header>
         <nav>
             <div class="navbar">
-                <a href="index.html" title="Startsida">Top 10 rated and trending</a>
+                <a href="index.html" title="Startsida"
+                    >Top 10 rated and trending</a
+                >
             </div>
             <form class="searchForm">
                 <input
                     id="searchField"
                     type="text"
-                    placeholder="Search for a movie, actor or anything movie related!"
+                    placeholder="Search for a movie or an actor!"
                 />
             </form>
         </nav>
         <main>
             <div class="movieLists">
                 <p>Top 10 rated movies on AMDB:</p>
-                <div class="top-rated-list">
-                    <ul>
-                        <li>Loading...</li>
-                    </ul>
-                </div>
+                <div class="top-rated-list"></div>
                 <p>Top 10 trending movies on AMDB:</p>
-                <div class="top-trending-list">
-                    <ul>
-                        <li>Loading...</li>
-                    </ul>
-                </div>
+                <div class="top-trending-list"></div>
             </div>
         </main>
         <footer></footer>
