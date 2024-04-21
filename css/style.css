@@ -163,3 +163,30 @@ a:visited {
     margin: 10px;
 }
 
+.plotText {
+    visibility: hidden; 
+    /* display:none;  funkar inte, fråga varför*/
+    white-space: pre-wrap;
+    opacity: 0; 
+    max-height: 0;
+    overflow: hidden; 
+    transition: visibility 0s, opacity 0.5s ease, max-height 0.5s ease; 
+}
+
+.movieCardDiv:hover .plotText {
+    visibility: visible; 
+    /* display: block; funkar inte, fråga varför */
+    opacity: 1; 
+    max-height: 100px; 
+}
+
+
+.movieCardDiv:hover{
+    transform: scale(103%); 
+    transition: 0.5s;
+}
+
+footer{
+    height: 200px;
+    background-color: black;
+}
