@@ -1,4 +1,4 @@
-//hämtar data från Api:et 
+//hämtar data från Api:et om personer inom branschen
 
 export async function getSearchedPerson(value) {
     const options = {

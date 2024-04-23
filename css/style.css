@@ -36,7 +36,6 @@ body {
     }
 }
 
-
 .headertext {
     width: 100%;
     height: 100%;
@@ -76,18 +75,21 @@ body {
     border-radius: 20px;
 }
 
-#selectOption{
+#selectOption {
     height: 40px;
     border-radius: 20px;
     background-color: black;
     color: white;
 }
 
-#searchButton{
+#searchButton {
     height: 40px;
     border-radius: 20px;
     background-color: black;
     color: white;
+}
+.hide {
+    display: none;
 }
 
 .searchedMovieResult {
@@ -108,7 +110,7 @@ body {
     border-radius: 20px;
 }
 
-.searchedPersonResult{
+.searchedPersonResult {
     display: grid;
     grid-template-columns: repeat(
         auto-fill,
@@ -125,7 +127,6 @@ body {
     margin-right: 29px;
     border-radius: 20px;
     margin-bottom: 30px;
-   
 }
 
 .textStyleForPersonCard {
@@ -135,15 +136,14 @@ body {
 .personCardDiv {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    padding:10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-#topTenMovieLists{
+#topTenMovieLists {
     transition: 0.5s;
 }
-
 
 .movieLists {
     margin-top: 40px;
@@ -199,8 +199,7 @@ body {
     transition: 0.5s;
 }
 
-
-.findUsMap{
+.findUsMap {
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -216,7 +215,6 @@ footer {
     text-align: center;
     padding-top: 15px;
 }
-
 
 a:link {
     color: #ffffff;
