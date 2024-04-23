@@ -1,42 +1,47 @@
-export function displayMovies(movieData, movieLists) {
-    const img_url = `https://image.tmdb.org/t/p/w200/`;
+//skapar HTML-element som visar titel, datum, bild, handling och betyg för filmerna
 
-    for (let i = 0; i < 10; i++) {
-        let title = movieData.results[i].title;
-        let releaseDate = movieData.results[i].release_date;
-        let posterPath = movieData.results[i].poster_path;
-        let plot = movieData.results[i].overview;
-        let rating = movieData.results[i].vote_average;
-        let card = document.createElement("div");
-        card.setAttribute("class", "movieCardDiv");
+export function displayMovies(movieData, movieContainer) {
+    const movieImg_url = `https://image.tmdb.org/t/p/w200/`;
+    let errText = "Not available right now, we are working on it!";
+    
+
+    movieData.forEach((movie) => {
+        let movieTitle = movie.title;
+        let releaseDate = movie.release_date;
+        let posterPath = movie.poster_path;
+        let plot = movie.overview;
+        let rating = movie.vote_average;
+
+        let cardEl = document.createElement("div");
+        cardEl.setAttribute("class", "movieCardDiv");
 
         let img = document.createElement("img");
         img.classList.add("card-img");
-        img.src = img_url + posterPath;
+        img.src = movieImg_url + posterPath;
+        img.alt = "Poster: " + errText;
 
-        let movieTitle = document.createElement("h7");
-        movieTitle.setAttribute("class", "card-title");
-        movieTitle.textContent = title;
+        let movieTitleEl = document.createElement("h7");
+        movieTitleEl.setAttribute("class", "card-title");
+        movieTitleEl.textContent = movieTitle || "Title: " + errText;
 
-        let movieReleaseDate = document.createElement("h7");
-        movieReleaseDate.setAttribute("class", "card-title");
-        movieReleaseDate.textContent = "Date: " + releaseDate;
+        let movieReleaseDateEl = document.createElement("h7");
+        movieReleaseDateEl.setAttribute("class", "card-title");
+        movieReleaseDateEl.textContent = "Date: " + (releaseDate || errText);
 
-        let moviePlot = document.createElement("h7");
-        moviePlot.setAttribute("class", "card-title plotText");
-        moviePlot.textContent = plot;
+        let moviePlotEl = document.createElement("h7");
+        moviePlotEl.setAttribute("class", "card-title plotText");
+        moviePlotEl.textContent = plot || "Plot: " + errText;
 
-        let averageRating = document.createElement("h7");
-        averageRating.setAttribute("class", "card-title");
-        averageRating.textContent = "Rating: " + rating;
+        let averageRatingEl = document.createElement("h7");
+        averageRatingEl.setAttribute("class", "card-title");
+        averageRatingEl.textContent = "Rating: " + (rating || errText);
 
-       
+        cardEl.appendChild(movieTitleEl);
+        cardEl.appendChild(averageRatingEl);
+        cardEl.appendChild(img);
+        cardEl.appendChild(movieReleaseDateEl);
+        cardEl.appendChild(moviePlotEl);
 
-        card.append(movieTitle);
-        card.append(averageRating);
-        card.append(img);
-        card.append(movieReleaseDate);
-        card.append(moviePlot);
-        movieLists.appendChild(card);
-    }
+        movieContainer.appendChild(cardEl);
+    });
 }

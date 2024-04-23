@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
         <script src="main.js" type="module"></script>
         <link rel="shortcut icon" href="#" />
         <title>AMDB</title>
@@ -22,10 +22,12 @@
         </header>
         <nav>
             <div class="navbar">
-                <a href="#topTenMovieLists" title="Startsida"
-                    >Top 10 rated and trending</a
+                <a href="/index.html" title="Startsida"
+                    >Search for a movie/see top 10 rated and trending</a
                 >
-                <a href="#footer" title="footer">Socials</a>
+                <a href="#footer" title="footer"
+                    >Socials</a
+                >
             </div>
             <form class="searchForm">
                 <input
@@ -33,27 +35,25 @@
                     type="text"
                     placeholder="Search for a movie or an actor!"
                 />
-                <select id="selectOption">
+                <select id="selectOption" >
                     <option value="Movie">Movie</option>
                     <option value="Person">Person</option>
-                </select>
-                <button id="searchButton" type="submit">Search</button>
+                   </select>
+                   <button id="searchButton" type="submit">Search</button>
             </form>
         </nav>
         <main>
-            <div class="searchedMovieResult"></div>
-            <div class="searchedPersonResult"></div>
-            <div class="movieLists" id="topTenMovieLists">
-                <p>Top 10 rated movies on AMDB:</p>
-                <div class="top-rated-list"></div>
-                <p>Top 10 trending movies on AMDB:</p>
-                <div class="top-trending-list"></div>
+            <div class="findUsMap">
+                <h1>Här finns vi:</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18030.439421020073!2d12.971701622808
+                776!3d55.60540860298138!2m3!1f0!2f0!3f0!3m2!1i1024!
+                2i768!4f13.1!3m3!1m2!1s0x4653a3e3fcbe6f9d%3A0x4fea1c7223ed64c0!2sPolisen%20Malm%C3%B6%20%E2%
+                80%93%20Porslinsgatan!5e0!3m2!1ssv!2sse!4v1696252546185!5m2!1ssv!2sse" 
+                width=90% height="570" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="karta"></iframe>
             </div>
         </main>
-        <footer id="footer">
-            <a href="./html/findUs.html" title="Hitta oss/konatkt"
-                >Hitta oss/kontakt</a
-            >
+        <footer>
+            <a href="html/findUs.html" title="Hitta oss/konatkt">Hitta oss/kontakt</a>
             <a href="https://www.instagram.com/" title="Instagram">Instagram</a>
             <a href="https://twitter.com/?lang=sv" title="X">x</a>
         </footer>

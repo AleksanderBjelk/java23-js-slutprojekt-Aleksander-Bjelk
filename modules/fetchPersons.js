@@ -1,7 +1,6 @@
-//Hämtar data från api:et utifrån vad användaren ger för värde
-//funkar med både film och person
+//hämtar data från Api:et 
 
-export async function getSearchedMovie(value) {
+export async function getSearchedPerson(value) {
     const options = {
         method: "GET",
         headers: {
@@ -11,7 +10,7 @@ export async function getSearchedMovie(value) {
         },
     };
 
-    const url = `https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=true&language=en-US&page=1`;
+    const url = `https://api.themoviedb.org/3/search/person?query=${value}&include_adult=false&language=en-US&page=1`;
 
     const response = await fetch (url, options);
 
@@ -23,8 +22,3 @@ export async function getSearchedMovie(value) {
         throw new Error('Movie not found');
     }
 }
-
-
-//link
-//https://developer.themoviedb.org/reference/search-movie
-

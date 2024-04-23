@@ -1,3 +1,4 @@
+//hämtar data för dem tio högst betygsatta filmerna
 export async function getTopRated() {
     const options = {
         method: "GET",
@@ -16,7 +17,7 @@ export async function getTopRated() {
     if (response.ok) {
         const data = await response.json();
         console.log(data);
-        return data;
+        return data.results.splice(0,10);
     } else if (response.status == 404) {
         throw new Error("Movie not found");
     }

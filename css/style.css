@@ -1,3 +1,18 @@
+body {
+    background-color: rgb(8, 92, 156);
+    margin: 0;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header {
+    background-color: rgb(0, 69, 125);
+    margin-left: 29px;
+    margin-right: 29px;
+    border-radius: 20px;
+}
+
 @keyframes huvudtext {
     0% {
         color: rgb(0, 69, 125);
@@ -20,6 +35,8 @@
         top: 0px;
     }
 }
+
+
 .headertext {
     width: 100%;
     height: 100%;
@@ -33,13 +50,18 @@
     font-size: 40px;
 }
 
-body {
-    background-color: rgb(8, 92, 156);
-    margin: 0;
-    font-family: "Jersey 25", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    
+.navbar {
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    color: white;
+    font-size: 25px;
 }
 
 .searchForm {
@@ -49,35 +71,78 @@ body {
 }
 
 #searchField {
-    width: 90%;
+    width: 85%;
     height: 40px;
     border-radius: 20px;
 }
 
-
-.center {
-    text-align: center;
+#selectOption{
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
 }
 
-.header {
-    background-color: rgb(0, 69, 125);
+#searchButton{
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+
+.searchedMovieResult {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    ); /* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+    gap: 20px;
+    background: rgb(0, 69, 125);
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 20px;
     margin-left: 29px;
     margin-right: 29px;
     border-radius: 20px;
 }
 
-
-.top-trending-list, .top-rated-list {
-    display: flex;
-    background:rgb(0, 69, 125);
-    margin-top: 20px;
-    margin-bottom: 20px;
+.searchedPersonResult{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    ); /* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+    gap: 20px;
+    background: rgb(0, 69, 125);
     padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 20px;
+    margin-left: 29px;
+    margin-right: 29px;
     border-radius: 20px;
-    overflow: auto;
-    white-space: nowrap;
+    margin-bottom: 30px;
+   
 }
 
+.textStyleForPersonCard {
+    font-size: 60px;
+}
+
+.personCardDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding:10px;
+}
+
+#topTenMovieLists{
+    transition: 0.5s;
+}
 
 
 .movieLists {
@@ -88,105 +153,100 @@ body {
     margin-left: 29px;
     margin-right: 29px;
     border-radius: 20px;
-  
-   
 }
 
-.navbar{
+.top-trending-list,
+.top-rated-list {
+    display: flex;
+    background: rgb(0, 69, 125);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.card-title {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.movieCardDiv {
+    margin: 10px;
+}
+
+.plotText {
+    visibility: hidden;
+    /* display:none;  funkar inte, fråga varför*/
+    white-space: pre-wrap;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: visibility 0s, opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.movieCardDiv:hover .plotText {
+    visibility: visible;
+    /* display: block; funkar inte, fråga varför */
+    opacity: 1;
+    max-height: 100px;
+}
+
+.movieCardDiv:hover {
+    transform: scale(103%);
+    transition: 0.5s;
+}
+
+
+.findUsMap{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+footer {
+    height: 200px;
     background-color: black;
+    font-size: 30px;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
     padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100%;
-    margin: auto;
-    text-align:center;
-    justify-content: space-around;
-    margin-bottom: 40px;
-    margin-top: 10px;
-    color: white;
-    font-size: 25px;
-    
 }
 
 
-a:link{
+a:link {
     color: #ffffff;
     text-decoration: none;
 }
 
 aside a:link {
-   color:rgb(0, 0, 0);
-   text-decoration: none;
-}
-
-aside a:visited {
-    color:rgb(0, 0, 0);
-    text-decoration: none;
-}
-
-aside a:hover {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
 a:hover {
-    background-color: rgb(8, 92, 156); 
-    transform: scale(110%); 
+    background-color: rgb(8, 92, 156);
+    transform: scale(110%);
     transition: 0.5s;
     text-decoration: none;
     padding: 7px;
 }
-    
+
 a:active {
     box-shadow: 3px 3px 3px rgb(8, 92, 156);
     text-decoration: none;
 }
 
 a:focus {
-    background: rgb(255, 0, 0);
+    background: rgb(8, 92, 156);
     text-decoration: none;
 }
 
 a:visited {
     color: #ffffff;
     text-decoration: none;
-
-}
-
-.card-title {
-    display: flex;
-    font-size: 14px; 
-    margin-bottom: 5px; 
-}
-
-
-.movieCardDiv{
-    margin: 10px;
-}
-
-.plotText {
-    visibility: hidden; 
-    /* display:none;  funkar inte, fråga varför*/
-    white-space: pre-wrap;
-    opacity: 0; 
-    max-height: 0;
-    overflow: hidden; 
-    transition: visibility 0s, opacity 0.5s ease, max-height 0.5s ease; 
-}
-
-.movieCardDiv:hover .plotText {
-    visibility: visible; 
-    /* display: block; funkar inte, fråga varför */
-    opacity: 1; 
-    max-height: 100px; 
-}
-
-
-.movieCardDiv:hover{
-    transform: scale(103%); 
-    transition: 0.5s;
-}
-
-footer{
-    height: 200px;
-    background-color: black;
 }
