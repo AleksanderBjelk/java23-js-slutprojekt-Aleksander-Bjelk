@@ -4,11 +4,16 @@ import { getTopRated } from "./modules/fetchTopRatedMoviesData.js";
 import { getTopTrending } from "./modules/fetchTrendingMoviesData.js";
 import { displayMovies } from "./modules/displayMovies.js";
 import { displayPersons } from "./modules/displayPersons.js";
+import { openWatchList } from "./modules/openAndClosingWatchlist.js";
+import { closeWatchList } from "./modules/openAndClosingWatchlist.js";
+
 
 const form = document.querySelector(".searchForm");
 const topTenRatedMovies = document.querySelector(".top-rated-list");
 const topTenTrendingMovies = document.querySelector(".top-trending-list");
 const selectOption = document.getElementById("selectOption");
+const openWatchListButton = document.getElementById("openWatchListButton");
+const closeWatchListButton = document.getElementById("closeWatchListButton");
 
 //Lyssnar på formet utifrån om en användare väljer att söka på en film eller en på en person
 //hanterar även felhanteringen om användare söker på något som inte finns i API:et
@@ -60,6 +65,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         });
     });
 });
+
+openWatchListButton.addEventListener("click", openWatchList);
+closeWatchListButton.addEventListener("click", closeWatchList);
 
 getTopRated().then((data) => displayMovies(data, topTenRatedMovies));
 getTopTrending().then((data) => displayMovies(data, topTenTrendingMovies));

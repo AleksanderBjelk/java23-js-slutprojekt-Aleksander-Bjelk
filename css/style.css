@@ -63,6 +63,46 @@ body {
     font-size: 25px;
 }
 
+.watchList {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.watchList.open {
+    width: 40%;
+}
+
+.watchList .closeWatchListBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background-color: black;
+    border: none;
+    color: #ffffff;
+}
+
+.openWatchListBtn{
+    background-color: rgb(0, 69, 125);
+    border: none;
+    height: 40px;
+    width: 100px;
+  
+    color: #ffffff;
+    font-size: large;
+    margin-left: 29px;
+    border-radius: 20px;
+}
+
 .searchForm {
     display: flex;
     align-items: center;
