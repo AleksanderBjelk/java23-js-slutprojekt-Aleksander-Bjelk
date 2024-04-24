@@ -32,7 +32,6 @@ export function displayPersons(personData, searchedResultContainer) {
             departmentEl.textContent = "Department: " + errText;
         }
 
-    
         cardEl.append(personNameEl);
         cardEl.append(img);
         cardEl.append(departmentEl);
@@ -41,7 +40,7 @@ export function displayPersons(personData, searchedResultContainer) {
             let mediaTypeEl = document.createElement("h7");
             let movieTitleEl = document.createElement("h7");
             let seriesTitleEl = document.createElement("h7");
-            
+
             let mediaType = media.media_type;
             let movieTitle = media.original_title;
             let seriesTitle = media.original_name;
@@ -72,4 +71,3 @@ export function displayPersons(personData, searchedResultContainer) {
         searchedResultContainer.appendChild(cardEl);
     });
 }
-      

@@ -13,18 +13,16 @@ export async function getSearchedMovie(value) {
 
     const url = `https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=true&language=en-US&page=1`;
 
-    const response = await fetch (url, options);
+    const response = await fetch(url, options);
 
-    if(response.ok){
+    if (response.ok) {
         const data = await response.json();
         console.log(data);
         return data.results;
-    } else if(response.status == 404){
-        throw new Error('Movie not found');
+    } else if (response.status == 404) {
+        throw new Error("Movie not found");
     }
 }
 
-
 //link
 //https://developer.themoviedb.org/reference/search-movie
-

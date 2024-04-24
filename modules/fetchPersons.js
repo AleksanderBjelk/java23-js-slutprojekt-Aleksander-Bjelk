@@ -12,13 +12,16 @@ export async function getSearchedPerson(value) {
 
     const url = `https://api.themoviedb.org/3/search/person?query=${value}&include_adult=false&language=en-US&page=1`;
 
-    const response = await fetch (url, options);
+    const response = await fetch(url, options);
 
-    if(response.ok){
+    if (response.ok) {
         const data = await response.json();
         console.log(data);
         return data.results;
-    } else if(response.status == 404){
-        throw new Error('Movie not found');
+    } else if (response.status == 404) {
+        throw new Error("Person not found");
     }
 }
+
+//API reference:
+//https://developer.themoviedb.org/reference/search-person

@@ -74,10 +74,11 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    overflow-y: auto;
 }
 
 .watchList.open {
-    width: 40%;
+    width: 20%;
 }
 
 .watchList .closeWatchListBtn {
@@ -91,16 +92,62 @@ body {
     color: #ffffff;
 }
 
-.openWatchListBtn{
+.openWatchListBtn {
     background-color: rgb(0, 69, 125);
     border: none;
     height: 40px;
     width: 100px;
-  
+
     color: #ffffff;
     font-size: large;
     margin-left: 29px;
     border-radius: 20px;
+}
+
+.watchListMoviesContainer {
+    color: white;
+    overflow-y: auto;
+    height: 80%;
+    padding: 10px;
+}
+
+#logoWatchList {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.addMovieToWatchlistBtn {
+    background-color: rgb(8, 92, 156);
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    color: white;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.removeMovieToWatchlistBtn {
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.addMovieToWatchlistBtn:hover,
+.removeMovieToWatchlistBtn:hover {
+    transform: scale(110%);
 }
 
 .searchForm {

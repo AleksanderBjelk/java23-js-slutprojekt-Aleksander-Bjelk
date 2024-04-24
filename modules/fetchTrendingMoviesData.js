@@ -18,11 +18,11 @@ export async function getTopTrending() {
     if (response.ok) {
         const data = await response.json();
         console.log(data);
-        return data.results.splice(0,10);
+        return data.results.splice(0, 10);
     } else if (response.status == 404) {
         throw new Error("Movie not found");
     }
 }
 
-//Link to API
+//API reference
 //https://developer.themoviedb.org/reference/trending-movies

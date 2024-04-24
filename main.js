@@ -4,9 +4,8 @@ import { getTopRated } from "./modules/fetchTopRatedMoviesData.js";
 import { getTopTrending } from "./modules/fetchTrendingMoviesData.js";
 import { displayMovies } from "./modules/displayMovies.js";
 import { displayPersons } from "./modules/displayPersons.js";
-import { openWatchList } from "./modules/openAndClosingWatchlist.js";
-import { closeWatchList } from "./modules/openAndClosingWatchlist.js";
-
+import { openWatchList } from "./modules/openAndClosingWatchList.js";
+import { closeWatchList } from "./modules/openAndClosingWatchList.js";
 
 const form = document.querySelector(".searchForm");
 const topTenRatedMovies = document.querySelector(".top-rated-list");

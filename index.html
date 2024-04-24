@@ -22,13 +22,15 @@
         </header>
         <nav>
             <div class="navbar">
-                <button id="openWatchListButton" class="openWatchListBtn">Watch-list</button>
+                <button id="openWatchListButton" class="openWatchListBtn">
+                    Watch-list
+                </button>
                 <a href="#topTenMovieLists" title="Startsida"
                     >Top 10 rated and trending</a
                 >
                 <a href="#footer" title="footer">Socials</a>
             </div>
-            
+
             <form class="searchForm">
                 <input
                     id="searchField"
@@ -44,9 +46,9 @@
         </nav>
         <main>
             <div id="searchErrorMessage" class="hide">
-                Movie or person not found. Please try another search.
+                <h3>Movie or person not found. Please try another search.</h3>
             </div>
-            
+
             <div class="searchedMovieResult"></div>
             <div class="searchedPersonResult"></div>
             <div class="movieLists" id="topTenMovieLists">
@@ -59,12 +61,12 @@
 
         <aside>
             <div id="watchListASide" class="watchList">
-                <button id="closeWatchListButton" class="closeWatchListBtn">X</button>
-                <div class="watchListMovies">
-                    
-                </div>
+                <button id="closeWatchListButton" class="closeWatchListBtn">
+                    X
+                </button>
+                <div class="watchListMoviesContainer"></div>
+                <h7 id="logoWatchList">AMDB</h7>
             </div>
-
         </aside>
 
         <footer id="footer">

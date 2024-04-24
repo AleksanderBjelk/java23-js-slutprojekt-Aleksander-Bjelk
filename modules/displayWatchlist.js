@@ -1,18 +1,23 @@
-//skapar HTML-element som visar titel, utgivningsdatum, bild, handling, betyg för filmerna och en knapp för att lägga till en film i watchlist
+//skapar HTML_element för watchlisten där den visar titel, utgivningsdatum, bild, handling, betyg för filmerna och en knapp för att ta bort en film från watchlist
 
-import { createAddToWatchlistButton } from "./movieWatchlistButtons.js";
+import { watchlist } from "./Watchlist.js";
+import { createRemoveFromWatchlistButton } from "./movieWatchlistButtons.js";
 
-export function displayMovies(movieData, movieContainer) {
+export function displayWatchlist() {
+    const watchlistContainer = document.querySelector(
+        ".watchListMoviesContainer"
+    );
+    watchlistContainer.innerHTML = "";
+
     const movieImg_url = `https://image.tmdb.org/t/p/w200/`;
     let errText = "Not available right now, we are working on it!";
 
-    movieData.forEach((movie) => {
+    watchlist.forEach((movie) => {
         let movieTitle = movie.title;
         let releaseDate = movie.release_date;
         let posterPath = movie.poster_path;
         let plot = movie.overview;
         let rating = movie.vote_average;
-        let addToWatchlistButtonEl = createAddToWatchlistButton(movie);
 
         let cardEl = document.createElement("div");
         cardEl.setAttribute("class", "movieCardDiv");
@@ -50,14 +55,15 @@ export function displayMovies(movieData, movieContainer) {
             averageRatingEl.textContent = "Rating: " + errText;
         }
 
+        let removeButtonEl = createRemoveFromWatchlistButton(movie);
+
         cardEl.appendChild(movieTitleEl);
         cardEl.appendChild(averageRatingEl);
         cardEl.appendChild(img);
         cardEl.appendChild(movieReleaseDateEl);
         cardEl.appendChild(moviePlotEl);
+        cardEl.appendChild(removeButtonEl);
 
-        cardEl.appendChild(addToWatchlistButtonEl);
-
-        movieContainer.appendChild(cardEl);
+        watchlistContainer.appendChild(cardEl);
     });
 }
