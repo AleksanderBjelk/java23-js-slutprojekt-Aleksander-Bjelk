@@ -6,10 +6,11 @@ Class: Java 23
 Teacher: Clara Leivas
 ```
 ## Github-pages-link
+https://aleksanderbjelk.github.io/java23-js-slutprojekt-Aleksander-Bjelk/
 
 
 ## Description
-In this assigment I have created my own versoin of a movie database using the [TMDB API]([https://pages.github.com/](https://developer.themoviedb.org/docs/getting-started)).<br>
+In this assigment I have created my own versoin of a movie database using the [TMDB API](https://developer.themoviedb.org/docs/getting-started).<br>
 <br>
 ### Functionality
 - Search for a movie
