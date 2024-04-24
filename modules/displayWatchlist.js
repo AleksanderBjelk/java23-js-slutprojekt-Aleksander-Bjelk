@@ -1,6 +1,6 @@
 //skapar HTML_element för watchlisten där den visar titel, utgivningsdatum, bild, handling, betyg för filmerna och en knapp för att ta bort en film från watchlist
 
-import { watchlist } from "./Watchlist.js";
+import { watchlist } from "./watchlist.js";
 import { createRemoveFromWatchlistButton } from "./movieWatchlistButtons.js";
 
 export function displayWatchlist() {

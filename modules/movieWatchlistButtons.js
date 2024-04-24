@@ -1,6 +1,6 @@
 //skapar knappar som lyssnar om en användare vill lägga till eller ta bort en film från watchlist
 
-import { addToWatchlist, removeFromWatchlist } from "./Watchlist.js";
+import { addToWatchlist, removeFromWatchlist } from "./watchlist.js";
 
 export function createAddToWatchlistButton(movie) {
     let buttonEl = document.createElement("button");
