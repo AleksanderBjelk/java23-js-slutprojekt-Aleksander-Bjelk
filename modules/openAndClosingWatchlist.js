@@ -1,9 +1,9 @@
 //öppnar och stänger watchlist
 
-export function openWatchList() {
+export function openWatchlist() {
     document.getElementById("watchListASide").classList.add("open");
 }
 
-export function closeWatchList() {
+export function closeWatchlist() {
     document.getElementById("watchListASide").classList.remove("open");
 }

@@ -1,5 +1,7 @@
 //Hämtar data från api:et utifrån vad användaren ger för värde
 //funkar med både film och person
+//link
+//https://developer.themoviedb.org/reference/search-movie
 
 export async function getSearchedMovie(value) {
     const options = {
@@ -19,10 +21,9 @@ export async function getSearchedMovie(value) {
         const data = await response.json();
         console.log(data);
         return data.results;
-    } else if (response.status == 404) {
+    } else {
         throw new Error("Movie not found");
     }
 }
 
-//link
-//https://developer.themoviedb.org/reference/search-movie
+

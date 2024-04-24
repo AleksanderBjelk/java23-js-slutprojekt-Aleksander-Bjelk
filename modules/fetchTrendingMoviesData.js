@@ -19,7 +19,7 @@ export async function getTopTrending() {
         const data = await response.json();
         console.log(data);
         return data.results.splice(0, 10);
-    } else if (response.status == 404) {
+    } else {
         throw new Error("Movie not found");
     }
 }
